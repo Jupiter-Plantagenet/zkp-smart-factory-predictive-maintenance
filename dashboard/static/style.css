@@ -1,0 +1,142 @@
+/* dashboard/static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    overflow-x: auto; /* Allows table to be scrollable horizontally if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.error-text {
+    color: red;
+    text-align: center;
+}
+
+/* Cell content wrapping */
+td {
+    word-wrap: break-word;
+    max-width: 200px; /* Adjust as needed, or remove for no max-width */
+}
+
+
+.loading-text {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.error-text {
+    color: #d9534f; /* Bootstrap's danger color */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #d9534f;
+    background-color: #f2dede;
+    border-radius: 4px;
+}
+
+/* For prediction cells */
+.failure-predicted {
+    color: red;
+    font-weight: bold;
+}
+
+.no-failure-predicted {
+    color: green;
+}
+
+/* Ensure table cells don't break layout too much */
+td {
+    word-wrap: break-word; /* or overflow-wrap: break-word; */
+    word-break: break-all; /* Allow breaking long words/hashes if needed */
+    max-width: 200px; /* Adjust as you see fit, or set for specific columns */
+    /* white-space: nowrap; /* Uncomment if you prefer no wrapping and rely on horizontal scroll */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */ /* Shows ... for overflowed content with nowrap and overflow:hidden */
+}
+
+/* Specific column widths (optional, adjust as needed) */
+#predictionsTable th:nth-child(1), #predictionsTable td:nth-child(1) { /* Timestamp */
+    min-width: 180px;
+}
+#predictionsTable th:nth-child(7), #predictionsTable td:nth-child(7) { /* Tx Hash */
+    min-width: 150px; 
+}
+#predictionsTable th:last-child, #predictionsTable td:last-child { /* Notes */
+    min-width: 250px;
+}
+th.sort-asc, th.sort-desc {
+    background-color: #0056b3; /* Darker blue when sorted */
+}

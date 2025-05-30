@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+joblib
+Flask
+web3
+python-dotenv

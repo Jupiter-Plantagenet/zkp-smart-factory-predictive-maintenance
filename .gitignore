@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*build*/           # General Python build artifacts
+dist/
+*.egg-info/
+
+# Conda/Python environments
+env/
+venv/
+smart_factory_env/
+
+# Sensitive files
+*.env
+
+# OS / IDE specific
+.DS_Store
+.idea/
+.vscode/
+
+# Node_modules (users should run 'npm install')
+node_modules/
+
+# Large Powers of Tau files
+*.ptau
+
+# Build outputs / Large generated files
+# Main circuit build outputs (users should generate)
+artifacts/circuit/circuit_build/
+# ZKP keys (users should generate their own trusted setup)
+artifacts/zkp_keys/decision_tree_0000.zkey
+artifacts/zkp_keys/decision_tree_0001.zkey
+artifacts/zkp_keys/verification_key.json
+
+# Runtime outputs from pipeline
+artifacts/runtime_outputs/
+# Or if keeping them in root for simplicity during dev:
+input.json
+proof.json
+public.json
+end_to_end_results.csv
+last_processed.txt # (if used)
+# circuit_build/decision_tree_js/witness.wtns # (this is inside a build dir)
+
+circom/
+
+# Data splits (if not committing)
+X_train.csv
+X_test.csv
+y_train.csv
+y_test.csv
+
+
+

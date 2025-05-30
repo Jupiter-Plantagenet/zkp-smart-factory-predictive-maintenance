@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Factory ZKP Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Factory Predictive Maintenance Log</h1>
+        <button id="refreshData">Refresh Data</button>
+        <div class="filter-container">
+            <label for="filterUDI">Filter by UDI:</label>
+            <input type="text" id="filterUDI" placeholder="Enter UDI">
+        </div>
+        <div class="table-container">
+            <table id="predictionsTable">
+                <thead>
+                    <tr>
+                        <th>Run Timestamp (UTC)</th>
+                        <th>Sample UDI</th>
+                        <th>Actual Label</th>
+                        <th>ML Prediction</th>
+                        <th>Circuit Prediction</th>
+                        <th>ZKP Verified (Local)</th>
+                        <th>Blockchain Tx Hash</th>
+                        <th>Gas Used</th>
+                        <th>Tx Status</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+        <p id="error-message" class="error-text"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
