@@ -178,6 +178,8 @@ This script processes samples, generates ZK proofs, and logs to the blockchain.
 
 ## 7. Folder Structure (Recommended)
 
+```
+
 <your_project_root>/
 |-- .env.example
 |-- .gitignore
@@ -217,6 +219,8 @@ This script processes samples, generates ZK proofs, and logs to the blockchain.
 |   |-- runtime_outputs/  <-- end_to_end_results.csv, input.json, proof.json, etc. (gitignore these)
 |
 |-- node_modules/         <-- (gitignore this)
+
+```
 
 *Adjust paths in `config_loader.py` and scripts to match this structure.*
 
